@@ -22,9 +22,9 @@
     "menus": {
       "scm/title": [
         {
-            "command": "vscode-pr-creator.createPR",
-            "group": "navigation@1",
-            "when": "true"
+          "command": "vscode-pr-creator.createPR",
+          "group": "navigation@1",
+          "when": "scmProvider == git"
         }
       ]
     }

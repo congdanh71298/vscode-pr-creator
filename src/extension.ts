@@ -67,9 +67,6 @@ export function activate(context: vscode.ExtensionContext) {
 
                   // Open the URL in the default browser
                   vscode.env.openExternal(vscode.Uri.parse(prUrl));
-                  vscode.window.showInformationMessage(
-                    'Pull Request URL opened in browser.'
-                  );
                 }
               );
             }
