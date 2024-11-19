@@ -17,32 +17,14 @@ export function activate(context: vscode.ExtensionContext) {
   // The commandId parameter must match the command field in package.json
   const disposable = vscode.commands.registerCommand(
     'vscode-pr-creator.createPR',
-    async () => {
+    async (context) => {
       const workspaceFolders = vscode.workspace.workspaceFolders;
       if (!workspaceFolders) {
         vscode.window.showErrorMessage('No workspace folder is open.');
         return;
       }
 
-      let workspacePath: string;
-      if (workspaceFolders.length === 1) {
-        workspacePath = workspaceFolders[0].uri.fsPath;
-      } else {
-        const selected = await vscode.window.showQuickPick(
-          workspaceFolders.map((folder) => ({
-            label: folder.name,
-            description: folder.uri.fsPath,
-            path: folder.uri.fsPath,
-          })),
-          {
-            placeHolder: 'Select repository to create PR from',
-          }
-        );
-        if (!selected) {
-          return;
-        }
-        workspacePath = selected.path;
-      }
+      let workspacePath: string = context.B.path;
 
       // Get the current branch name
       exec(
