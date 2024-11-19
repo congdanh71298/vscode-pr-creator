@@ -1,8 +1,20 @@
 {
   "name": "vscode-pr-creator",
-  "displayName": "vscode-pr-creator",
-  "description": "Create PR",
+  "displayName": "VSCode PR Creator",
+  "description": "Create PR lightening fast",
   "version": "0.0.1",
+  "publisher": "danhnguyen",
+  "author": {
+      "name": "Danh Nguyen",
+      "email": "congdanh71298@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/congdanh71298/vscode-pr-creator/blob/main/README.md",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/congdanh71298/vscode-pr-creator"
+  },
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.95.0"
   },
